@@ -1,6 +1,6 @@
 #
 # Hello World program in Python
-#
+# take info from input and display
 def main():
 	print("Hellow World")
 	name = input("What is your name? ")
