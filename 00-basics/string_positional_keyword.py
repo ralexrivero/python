@@ -1,0 +1,1 @@
+print("Sammy the {0} {1} a {pr}".format("dog", "made", pr = "pull request"))
