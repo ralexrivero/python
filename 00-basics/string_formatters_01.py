@@ -1,0 +1,1 @@
+print("Sammy has {} ballons.".format(5))
