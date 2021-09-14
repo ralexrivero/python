@@ -7,3 +7,8 @@ print(a is b)
 c = a
 
 print(a is c)
+
+x = "Some"
+y = None
+
+print(x is not None, y is None)
