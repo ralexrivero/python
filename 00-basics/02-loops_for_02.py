@@ -23,5 +23,7 @@ print()
 for count, value in enumerate(values):
     print(count, value)
 
+print()
+
 for count, value in enumerate(values, start=1):
     print(count, value)
