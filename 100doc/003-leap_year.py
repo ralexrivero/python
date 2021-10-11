@@ -1,5 +1,5 @@
 print("Welcome to the leap year evaluator!")
-year = int(input("Enter a year to evaluate: "))
+year = int(input("Which year do you want to check?: "))
 
 if year % 4 == 0:
     if year % 100 == 0:
