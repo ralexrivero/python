@@ -27,4 +27,4 @@ if score < 10 or score > 90:
     message = ", you go together like coke and mentos."
 elif score >= 40 and score <= 50:
     message = ", you are alright together."
-print("Your score is {:d} {:s}".format(score, message))
+print("Your score is {:d}{:s}".format(score, message))
