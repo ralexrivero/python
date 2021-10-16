@@ -8,4 +8,4 @@ name = nameAsCSV.split(", ")
 print("{:}".format(name))
 
 banker = random.choice(name)
-print("{:s} will pay the bill".format(banker))
+print("{:s} is going to pay the bill today!".format(banker))
