@@ -13,10 +13,10 @@ password = []
 
 m = 0
 for l in range(0, user_a + user_d + user_s):
-    if m <= user_a:
+    if m < user_a:
         password.append(alpha[random.randint(0, len(alpha) - 1)])
         m += 1
-    elif m <= user_a + user_d:
+    elif m < user_a + user_d:
         password.append(digits[random.randint(0, len(digits) - 1)])
         m += 1
     else:
