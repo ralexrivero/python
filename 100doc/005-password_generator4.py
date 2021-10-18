@@ -4,7 +4,7 @@ import string
 alpha = list(string.ascii_letters)
 digits = list(string.digits)
 special = list(string.printable[62:94])
-print(special)
+
 print("Welcome to the password generator.")
 user_a = int(input("How many letters would you like in your password?\n"))
 user_d = int(input("How many numbers would you like?\n"))
