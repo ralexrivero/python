@@ -4,4 +4,4 @@ def my_function():
     print("Bye")
 
 """Call the function"""
-my_function() 
+my_function()
