@@ -27,11 +27,15 @@ life = 6
 while (countdown > 0):
     letter = input("Guess a letter: ")
     letter = letter.lower()
-    for w in word_as_list:
+    for i in range(word_len):
+        w = word_as_list[i]
         eval = letter in w
         if eval == True:
-            hang_list[word_as_list.index(letter)] = letter
-            countdown -= 1
+            if hang_list[i] != letter:
+                hang_list[i] = letter
+                countdown -= 1
+            else:
+                break
     life -= 1
     if life == 0:
         print("You lose")
@@ -39,5 +43,7 @@ while (countdown > 0):
     for h in hang_list:
         print(h, end=' ')
     print()
+    if countdown <= 0:
+        print("You win!")
 
 print("countdown: {:d}, life: {:d}".format(countdown, life))
