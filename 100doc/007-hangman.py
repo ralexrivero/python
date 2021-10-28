@@ -10,9 +10,9 @@ word_len = len(word)
 
 # creates a list to fill with the user input letters
 # print one underscore by each letter of the random word
-hang_list = list("_ " * word_len)
+hang_list = list("_" * word_len)
 for h in hang_list:
-    print(h, end='')
+    print(h, end=' ')
 print()
 
 # convert word in list
@@ -21,19 +21,23 @@ print(word_as_list)
 
 # prompt to the user to enter a letter
 
+countdown = word_len
+life = 6
 
-letter = input("Guess a letter: ")
-letter = letter.lower()
-print(word_len)
-for w in word_as_list:
-    eval = letter in w
-    if eval == True:
-        print(w, end=' ')
-        word_len -= 1
-    else:
-        print("_ ", end='')
-        word_len -= 1
+while (countdown > 0):
+    letter = input("Guess a letter: ")
+    letter = letter.lower()
+    for w in word_as_list:
+        eval = letter in w
+        if eval == True:
+            hang_list[word_as_list.index(letter)] = letter
+            countdown -= 1
+    life -= 1
+    if life == 0:
+        print("You lose")
+        break
+    for h in hang_list:
+        print(h, end=' ')
+    print()
 
-
-# print debugging information
-print('\n', word, word_len, letter)
+print("countdown: {:d}, life: {:d}".format(countdown, life))
