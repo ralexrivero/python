@@ -2,7 +2,7 @@ import random
 import string
 
 
-# Generates a random word
+# Generates (choose) a random word
 words = ["advark", "baboon", "apple"]
 word = random.choice(words)
 word = word.lower()
@@ -20,17 +20,20 @@ word_as_list = list(word)
 print(word_as_list)
 
 # prompt to the user to enter a letter
-while word_as_list:
-    letter = input("Guess a letter: ")
-    letter = letter.lower()
-    if word_as_list.index(letter) >= 0:
-        hang_list[word_as_list.index(letter), letter]
-        word_as_list[word_as_list.index(letter)] = '*'
+
+
+letter = input("Guess a letter: ")
+letter = letter.lower()
+print(word_len)
+for w in word_as_list:
+    eval = letter in w
+    if eval == True:
+        print(w, end=' ')
+        word_len -= 1
     else:
-        print("Bad")
-    for h in hang_list:
-        print(h, end='')
-    print()
+        print("_ ", end='')
+        word_len -= 1
+
 
 # print debugging information
-print(word, word_len, letter)
+print('\n', word, word_len, letter)
