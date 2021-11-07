@@ -10,7 +10,7 @@ class Person:
         self.gender = gender
 
     def personalData(self):
-        print("Name: {:s}\nAge: {:s}\nGender: {:s}\n".format(self.name, self.age, self.gender))
+        print("Name: {:s}\nAge: {:d}\nGender: {:s}\n".format(self.name, self.age, self.gender))
 
-Person001 = Person("Ronald", "41", "Male")
+Person001 = Person("Ronald", 41, "Male")
 Person001.personalData()
