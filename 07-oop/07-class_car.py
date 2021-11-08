@@ -15,10 +15,12 @@ class Car:
         """ if on == True """
         if(self.on):
             return "The car is running"
+        else:
+            return "The car is stopped"
 
     def __str__(self):
         return "Car properties\nBrand: {:s}\nYear: {:d}\nColor{:s}\nTires:{:d}\nOn:{}\n".format(self.brand, self.year, self.color, self.tires, self.on)
 
 carOne = Car()
-carOne.startCar(True)
+print(carOne.startCar(True))
 print(str(carOne))
