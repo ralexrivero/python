@@ -16,6 +16,9 @@ class Books():
         """This underscore attribute is considered
         interal to the class"""
 
+    def __str__(self):
+        return "Title: {}, Author: {}, Pages: {}, Price: {}".format(self.title, self.author, self.pages, self.getprice())
+
 book1 = Books("Python Rocks", "Ronald Rivero", 200, 39.99)
 book2 = Books("Python for beginners", "Rodirgo Mato", 100, 49.99)
 
@@ -28,3 +31,7 @@ print(book1.price)
 print("Price: {:.2f}".format(book1.getprice()))
 book1.setdiscount(0.10)
 print("Final price: {:.2f}".format(book1.getprice()))
+
+print(book1)
+print("--")
+print(book1.__dict__)
