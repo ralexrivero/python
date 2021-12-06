@@ -101,6 +101,8 @@ while (countdown > 0):
     print(hangman[life])
     letter = input("Guess a letter: ")
     letter = letter.lower()
+    if letter in hang_list:
+        print("You already has typed the {:s} letter".format(letter))
     for i in range(word_len):
         w = word_as_list[i]
         eval = letter in w
@@ -110,7 +112,9 @@ while (countdown > 0):
                 countdown -= 1
             else:
                 break
+            print("You match the letter: {:s}".format(letter))
     if letter not in word_as_list:
+        print("You guess : {:s}, that's not in the word. You loose a life!".format(letter))
         life -= 1
         if life == 0:
             print(hangman[0])
