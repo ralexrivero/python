@@ -1,9 +1,77 @@
+#!/usr/bin/env python3
+
 import random
 import string
 
+# hangman ascii art
+hangman = ['''
+      _______
+     |/      |
+     |      (_)
+     |      /|\\
+     |       |
+     |      / \\
+     |
+ ____|___
+''', '''
+      _______
+     |/      |
+     |      (_)
+     |      \|/
+     |       |
+     |      /
+     |
+ ____|___
+''', '''
+      _______
+     |/      |
+     |      (_)
+     |      \|/
+     |       |
+     |
+     |
+ ____|___
+''', '''
+      _______
+     |/      |
+     |      (_)
+     |      \|
+     |       |
+     |
+     |
+ ____|___
+''', '''
+      _______
+     |/      |
+     |      (_)
+     |       |
+     |       |
+     |
+     |
+ ____|___
+''', '''
+      _______
+     |/      |
+     |      (_)
+     |
+     |
+     |
+     |
+ ____|___
+''', '''
+      _______
+     |/      |
+     |
+     |
+     |
+     |
+     |
+ ____|___
+ ''']
+
 
 # Generates (choose) a random word
-words = ["advark", "baboon", "apple"]
+words = ["Uruguay", "Argentina", "Brasil", "Chile", "Colombia", "Venezuela", "Ecuador"]
 word = random.choice(words)
 word = word.lower()
 word_len = len(word)
@@ -17,14 +85,20 @@ print()
 
 # convert word in list
 word_as_list = list(word)
-print(word_as_list)
 
 # prompt to the user to enter a letter
 
 countdown = word_len
-life = 6
+life = 6 # number of lives, fixed, 2 arms, 2 legs, body, and head
 
+
+'''
+    print an empty handman
+    ask user for a letter, if the letter is in the word, then replace
+    the underscore with matching letter
+'''
 while (countdown > 0):
+    print(hangman[life])
     letter = input("Guess a letter: ")
     letter = letter.lower()
     for i in range(word_len):
@@ -36,14 +110,20 @@ while (countdown > 0):
                 countdown -= 1
             else:
                 break
-    life -= 1
-    if life == 0:
-        print("You lose")
-        break
+    if letter not in word_as_list:
+        life -= 1
+        if life == 0:
+            print(hangman[0])
+            print("You lose!")
+            break
     for h in hang_list:
         print(h, end=' ')
     print()
-    if countdown <= 0:
-        print("You win!")
 
-print("countdown: {:d}, life: {:d}".format(countdown, life))
+''' if the letter is not in the word, then decrease the life by 1 '''
+if countdown == 0 and life > 0:
+    print("You win!")
+
+print("The word to guess: {:s}".format(word))
+
+# print("countdown: {:d}, life: {:d}".format(countdown, life))
