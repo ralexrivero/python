@@ -2,79 +2,18 @@
 
 import random
 import string
-
-# hangman ascii art
-hangman = ['''
-      _______
-     |/      |
-     |      (_)
-     |      /|\\
-     |       |
-     |      / \\
-     |
- ____|___
-''', '''
-      _______
-     |/      |
-     |      (_)
-     |      \|/
-     |       |
-     |      /
-     |
- ____|___
-''', '''
-      _______
-     |/      |
-     |      (_)
-     |      \|/
-     |       |
-     |
-     |
- ____|___
-''', '''
-      _______
-     |/      |
-     |      (_)
-     |      \|
-     |       |
-     |
-     |
- ____|___
-''', '''
-      _______
-     |/      |
-     |      (_)
-     |       |
-     |       |
-     |
-     |
- ____|___
-''', '''
-      _______
-     |/      |
-     |      (_)
-     |
-     |
-     |
-     |
- ____|___
-''', '''
-      _______
-     |/      |
-     |
-     |
-     |
-     |
-     |
- ____|___
- ''']
-
+from hangman_ascii import title ,hangman
+from hangman_list import words
+import os
 
 # Generates (choose) a random word
-words = ["Uruguay", "Argentina", "Brasil", "Chile", "Colombia", "Venezuela", "Ecuador"]
 word = random.choice(words)
 word = word.lower()
 word_len = len(word)
+
+# print ascii art for game name
+print(title)
+
 
 # creates a list to fill with the user input letters
 # print one underscore by each letter of the random word
@@ -91,7 +30,6 @@ word_as_list = list(word)
 countdown = word_len
 life = 6 # number of lives, fixed, 2 arms, 2 legs, body, and head
 
-
 '''
     print an empty handman
     ask user for a letter, if the letter is in the word, then replace
@@ -100,6 +38,7 @@ life = 6 # number of lives, fixed, 2 arms, 2 legs, body, and head
 while (countdown > 0):
     print(hangman[life])
     letter = input("Guess a letter: ")
+    os.system("clear")
     letter = letter.lower()
     if letter in hang_list:
         print("You already has typed the {:s} letter".format(letter))
