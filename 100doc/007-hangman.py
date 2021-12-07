@@ -21,12 +21,24 @@ print(title)
 # creates a list to fill with the user input letters
 # print one underscore by each letter of the random word
 hang_list = list("_" * word_len)
-for h in hang_list:
-    print(h, end=' ')
-print()
 
 # convert word in list
 word_as_list = list(word_clean)
+
+"""
+Automatically match the spaces when is more than one word
+"""
+space = ' '
+for i in range(word_len):
+        w = word_as_list[i]
+        eval = space in w
+        if eval is True:
+            hang_list[i] = space
+
+# print the underscores for the word(s)
+for h in hang_list:
+    print(h, end=' ')
+print()
 
 # prompt to the user to enter a letter
 
