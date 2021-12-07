@@ -30,10 +30,10 @@ Automatically match the spaces when is more than one word
 """
 space = ' '
 for i in range(word_len):
-        w = word_as_list[i]
-        eval = space in w
-        if eval is True:
-            hang_list[i] = space
+    w = word_as_list[i]
+    eval = space in w
+    if eval is True:
+        hang_list[i] = space
 
 # print the underscores for the word(s)
 for h in hang_list:
@@ -53,7 +53,7 @@ def display_black_list():
     """
     print("\nBlack list: ", end='')
     for i in black_list:
-        print("{:s} ".format(i),end="")
+        print("{:s} ".format(i), end="")
     print()
 
 
@@ -64,7 +64,7 @@ def display_black_list():
 '''
 while (countdown > 0):
     display_black_list()
-    print( hangman[life])
+    print(hangman[life])
     letter = input("Guess a letter: ")
     os.system("clear")
     letter = letter.lower()
