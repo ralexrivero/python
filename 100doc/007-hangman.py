@@ -2,14 +2,17 @@
 
 import random
 import string
-from hangman_ascii import title ,hangman
-from hangman_list import words
+from hangman_ascii import title, hangman
+from hangman_list import words, a, b
 import os
 
+
 # Generates (choose) a random word
-word = random.choice(words)
-word = word.lower()
-word_len = len(word)
+word = random.choice(words)  # choose random word
+word_clean = word.lower()  # original word in lowercase
+word_translated = str.maketrans(a, b)  # clean characters
+word_clean.translate(word_translated)
+word_len = len(word_clean)
 
 # print ascii art for game name
 print(title)
@@ -23,12 +26,12 @@ for h in hang_list:
 print()
 
 # convert word in list
-word_as_list = list(word)
+word_as_list = list(word_clean)
 
 # prompt to the user to enter a letter
 
 countdown = word_len
-life = 6 # number of lives, fixed, 2 arms, 2 legs, body, and head
+life = 6  # number of lives, fixed, 2 arms, 2 legs, body, and head
 
 '''
     print an empty handman
@@ -45,7 +48,7 @@ while (countdown > 0):
     for i in range(word_len):
         w = word_as_list[i]
         eval = letter in w
-        if eval == True:
+        if eval is True:
             if hang_list[i] != letter:
                 hang_list[i] = letter
                 countdown -= 1
@@ -53,7 +56,8 @@ while (countdown > 0):
                 break
             print("You match the letter: {:s}".format(letter))
     if letter not in word_as_list:
-        print("You guess : {:s}, that's not in the word. You loose a life!".format(letter))
+        print("You guess : {:s}, that's not in the word. You loose a life!"
+              .format(letter))
         life -= 1
         if life == 0:
             print(hangman[0])

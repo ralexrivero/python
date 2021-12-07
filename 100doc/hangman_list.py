@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+a, b = 'áéíóúü','aeiouu'
 
 words = ["Afganistan",
 "Akrotiri",
@@ -260,4 +260,3 @@ words = ["Afganistan",
 "Yibuti",
 "Zambia",
 "Zimbabue"]
-
