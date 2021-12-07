@@ -44,6 +44,18 @@ print()
 
 countdown = word_len
 life = 6  # number of lives, fixed, 2 arms, 2 legs, body, and head
+black_list = []
+
+
+def display_black_list():
+    """
+    display the list of wrong letters to avoid by the user
+    """
+    print("\nBlack list: ", end='')
+    for i in black_list:
+        print("{:s} ".format(i),end="")
+    print()
+
 
 '''
     print an empty handman
@@ -51,7 +63,8 @@ life = 6  # number of lives, fixed, 2 arms, 2 legs, body, and head
     the underscore with matching letter
 '''
 while (countdown > 0):
-    print(hangman[life])
+    display_black_list()
+    print( hangman[life])
     letter = input("Guess a letter: ")
     os.system("clear")
     letter = letter.lower()
@@ -66,10 +79,11 @@ while (countdown > 0):
                 countdown -= 1
             else:
                 break
-            print("You match the letter: {:s}".format(letter))
+            print("You match the letter: {:s}\n".format(letter))
     if letter not in word_as_list:
-        print("You guess : {:s}, that's not in the word. You loose a life!"
+        print("You guess : {:s}, that's not in the word. You loose a life!\n"
               .format(letter))
+        black_list.append(letter)
         life -= 1
         if life == 0:
             print(hangman[0])
