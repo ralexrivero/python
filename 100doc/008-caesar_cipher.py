@@ -3,10 +3,10 @@
 """
 caesar cipher encode and decode for encrypt messages in ascii code
 Displace the character the number of positions given by the user
-lowecase
-uppercase
-numbers
-space
+    lowecase
+    uppercase
+    numbers
+    space
 """
 
 
@@ -56,6 +56,7 @@ def decrypt(text, shift):
                 decipher += 26
         print("{:c}".format(decipher), end='')
     print()
+
 
 direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
 text = input("Type your message:\n")
