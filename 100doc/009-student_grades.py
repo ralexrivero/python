@@ -15,9 +15,9 @@ for name in scores:
     if score > 90:
         grades[name] = "Outstanding"
     elif score > 80:
-        grades[name]= "Exceeds Expectations"
+        grades[name] = "Exceeds Expectations"
     elif score > 70:
-        grades[name]= "Acceptable"
+        grades[name] = "Acceptable"
     else:
         grades[name] = "Fail"
 
