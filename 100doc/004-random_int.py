@@ -12,7 +12,7 @@ print(rand_float)
 rand_int2 = random.randint(0, 5)
 print(rand_int2)
 
-rand_float2 = round(random.random() *5)
+rand_float2 = round(random.random() * 5)
 print(rand_float2)
 
 lis_len = 0
@@ -22,7 +22,7 @@ for i in range(0, 100):
     rep = 0
     num = random.randint(1, 45)
     for j in loto:
-        rep =  loto.count(num)
+        rep = loto.count(num)
     if rep == 1:
         break
     loto.append(num)

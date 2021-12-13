@@ -1,6 +1,6 @@
 
-s = "\U000025A1" #unicode square
-t = "\U00002217" #unicode triangle
+s = "\U000025A1"  # unicode square
+t = "\U00002217"  # unicode triangle
 
 row1 = [s, s, s]
 row2 = [s, s, s]
@@ -15,6 +15,6 @@ position = int(input("Where do you want to put the treasure?\n\
 col = int(position / 10)
 row = position % 10
 
-map[row -1][col-1] = t
+map[row - 1][col - 1] = t
 
 print("{}\n{}\n{}".format(map[0], map[1], map[2]))

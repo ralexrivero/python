@@ -11,6 +11,6 @@ for i in printable_chars:
         break
     valid_chars.append(i)
 
-for i in range(0 , 12):
+for i in range(0, 12):
     print(valid_chars[random.randint(0, len(valid_chars))], end='')
 print()

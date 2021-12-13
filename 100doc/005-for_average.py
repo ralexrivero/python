@@ -8,5 +8,3 @@ for v in values:
     total += v
 average = total / x
 print("The average of values is: {:.2f}".format(average))
-
-

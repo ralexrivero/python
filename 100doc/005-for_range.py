@@ -1,4 +1,5 @@
-user_range = input("Type a range: (space separated values: start, end, [step]):\n").split()
+user_range = input("Type a range: \
+(space separated values: start, end, [step]):\n").split()
 numbers = []
 
 for u in range(0, len(user_range)):
@@ -9,4 +10,6 @@ if len(user_range) == 2:
 for n in range(user_range[0], user_range[1], user_range[2]):
     numbers.append(n)
 
-print("\nvalues: {:d}\nminimum value: {:d}\nmaximum value: {:d}\nacumulated value:{:d}".format(len(numbers),min(numbers), max(numbers), sum(numbers)))
+print("\nvalues: {:d}\nminimum value: \
+{:d}\nmaximum value: {:d}\nacumulated value:\
+{:d}".format(len(numbers), min(numbers), max(numbers), sum(numbers)))

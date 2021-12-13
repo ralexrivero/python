@@ -18,10 +18,11 @@ score = 0
 score += 1
 print(score)
 
- # print format
+# print format
 score = 0
 height = 1.8
 isWinning = True
 
 # f-String
-print(f"your score is {score}, your height is {height}, you are winning is {isWinning}")
+print(f"your score is {score}, your height is
+      {height}, you are winning is {isWinning}")

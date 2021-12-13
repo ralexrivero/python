@@ -8,7 +8,7 @@ print("123" + "345")
 
 # integer
 
-print(123 + 345) 
+print(123 + 345)
 
 # the undersocres uses to separate decimal
 
@@ -18,7 +18,7 @@ print(123_456_789)
 
 print(3.14159)
 
-#boolean
+# boolean
 
 True
 False
@@ -28,7 +28,7 @@ num_char = len(input("What is your name?"))
 # typecasting int to str
 
 new_num_char = str(num_char)
-print("Your name is " + new_num_char  + " characters.")
+print("Your name is " + new_num_char + " characters.")
 
 print(type(num_char))
 

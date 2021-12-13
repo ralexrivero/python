@@ -69,8 +69,8 @@ def caesar(direction, text, shift):
         print("{:c}".format(cipher), end='')
     print()
 
-print(title)
 
+print(title)
 
 
 run_again = True

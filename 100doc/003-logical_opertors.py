@@ -26,7 +26,7 @@ print(operator)
 operator = a == 13 or a < 1
 print(operator)
 
-#not reverses the condition: false come true and true come false
+# not reverses the condition: false come true and true come false
 print("-" * 40)
 print("not")
 print("-" * 40)

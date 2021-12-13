@@ -12,7 +12,7 @@ user_s = int(input("How many symbols would you like?\n"))
 password = []
 
 m = 0
-for l in range(0, user_a + user_d + user_s):
+for ln in range(0, user_a + user_d + user_s):
     if m < user_a:
         password.append(alpha[random.randint(0, len(alpha) - 1)])
         m += 1

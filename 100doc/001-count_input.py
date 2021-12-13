@@ -1,3 +1,3 @@
 a = input("What is your name?")
-l = len(a)
-print("The length of: {:s} is {:d}".format(a, l))
+lgh = len(a)
+print("The length of: {:s} is {:d}".format(a, lgh))

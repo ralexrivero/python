@@ -1,7 +1,9 @@
+#!/usr/bin/env python3
 import random
 
 
-welcome = "What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors.\n"
+welcome = "What do you choose? Type 0 for Rock, 1 for Paper or \
+2 for Scissors.\n"
 choice = int(input(welcome))
 
 
@@ -53,17 +55,17 @@ result = "You "
 
 if choice == machine:
     result = "Draw"
-elif choice == 0: #Rock
+elif choice == 0:  # Rock
     if machine == 2:
         result += "win!"
     else:
         result += "lose"
-elif choice == 1: #Paper
+elif choice == 1:  # Paper
     if machine == 0:
         result += "win!"
     else:
         result += "lose"
-elif choice == 2: #Scissors
+elif choice == 2:  # Scissors
     if machine == 0:
         result += "lose"
     else:
