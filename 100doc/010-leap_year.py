@@ -25,7 +25,7 @@ print("Days in a month")
 
 
 def days_in_month(year, month):
-    if year is True and month is 2:
+    if year is True and month == 2:
         return 29
     else:
         return days_month[month - 1]
