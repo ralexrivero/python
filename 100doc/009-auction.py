@@ -11,6 +11,7 @@ auction = {}
 loop = True
 maxValue = 0
 
+
 def addAuction(name, bid):
     auction[name] = bid
 
