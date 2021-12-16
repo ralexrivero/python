@@ -52,12 +52,15 @@ print(book1.__dict__)
 print(news1)
 
 """print type of two objects"""
+print("\nType of objects")
 print(type(news1))
 print(type(book1))
 
+print("\nCheck if two objects are the same type")
 """Check if two objects are the same type"""
 print(type(book1) == type(news1))
 
+print("\nCheck instance object")
 """ isinstance"""
 print(isinstance(book1, Books))
 print(isinstance(news1, Newspaper))
