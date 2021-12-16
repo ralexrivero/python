@@ -50,5 +50,26 @@ for f in modes:
     print(f)
 option = input("Choose an operation: ")
 n2 = float(input("Enter the second number: "))
+first_calc = modes[option](n1, n2)
+print("{:.1f} {:s} {:.1f} = {:.1f}".format(n1, option, n2, first_calc))
 
-print("{:.1f} {:s} {:.1f} = {:.1f}".format(n1, option, n2, modes[option](n1, n2)))
+
+def repeat_calc():
+    """
+    Repeat calculation with the previous result
+    """
+    prev_calc = first_calc
+    repeat = input("want to continue? type 'y' or 'n': ")
+    while (repeat == "y"):
+        for f in modes:
+            print(f)
+        option = input("Pick another operation: ")
+        n3 = float(input("Enter the next number: "))
+        next_calc = modes[option](prev_calc, n3)
+        print("{:.1f} {:s} {:.1f} = {:.1f}".format(prev_calc,
+              option, n3, next_calc))
+        repeat = input("want to continue? type 'y' or 'n': ")
+        prev_calc = next_calc
+
+
+repeat_calc()
