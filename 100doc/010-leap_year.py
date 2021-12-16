@@ -25,6 +25,11 @@ print("Days in a month")
 
 
 def days_in_month(year, month):
+    """
+    Return the days in a month at a given year
+    """
+    if month < 1 or month > 12:
+        return "Enter a valid month"
     if year is True and month == 2:
         return 29
     else:

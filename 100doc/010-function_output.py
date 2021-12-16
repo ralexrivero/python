@@ -10,7 +10,8 @@ l_name = input("Last name: ")
 
 def title_case(f_name, l_name):
     """
-    Transform text to title case
+    Take a first name and last name and format it
+    to return the title case version.
     """
     if f_name == "" or l_name == "":
         return "You didn't provide valid inputs"
