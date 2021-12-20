@@ -17,6 +17,7 @@ class Periodical(Publication):
     def __str__(self):
         return "* Title: {}\n* Price: ${}\n* Period: {}\n* Publisher: {}\n\n{}\n".format(self.title, self.price, self.period, self.publisher, ("*"*80))
 
+
 class Book(Publication):
     def __init__(self, title, price, author, pages):
         super().__init__(title, price)

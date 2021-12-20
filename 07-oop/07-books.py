@@ -38,6 +38,7 @@ class Books():
     def __str__(self):
         return "Title: {}, Author: {}, Pages: {}, Price: {}".format(self.title, self.author, self.pages, self.getprice())
 
+
 class Newspaper():
     def __init__(self, title, publisher, month, year):
         self.title = title
@@ -48,7 +49,8 @@ class Newspaper():
     def __str__(self):
         return "Title: {}, Publisher: {}, Month: {}, Year: {}".format(self.title, self.publisher, self.month, self.year)
 
-print("Book types: ", Books.getbooktypes() )
+
+print("Book types: ", Books.getbooktypes())
 
 news1 = Newspaper("The Morning", "The Times", "November", 2021)
 

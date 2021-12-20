@@ -2,15 +2,18 @@
 """
 creates a basic class
 """
+
+
 class Book():
     def __init__(self, title):
         self.title = title
+
 
 """
 creates instances of the class
 """
 
-b1 = Book("Titanic") # create a Book object
+b1 = Book("Titanic")  # create a Book object
 b2 = Book("Lord of the Rings")
 
 """

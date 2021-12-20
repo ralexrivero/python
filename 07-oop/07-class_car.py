@@ -2,6 +2,8 @@
 """
 class car
 """
+
+
 class Car:
     def __init__(self):
         self.brand = "Mercedes"
@@ -20,6 +22,7 @@ class Car:
 
     def __str__(self):
         return "Car properties\nBrand: {:s}\nYear: {:d}\nColor{:s}\nTires:{:d}\nOn:{}\n".format(self.brand, self.year, self.color, self.tires, self.on)
+
 
 carOne = Car()
 print(carOne.startCar(True))
