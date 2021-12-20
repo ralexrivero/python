@@ -1,11 +1,29 @@
 #!/usr/bin/env python3
 class Books():
+    BOOK_TYPES = ("Hardcover", "Paperback", "Ebook")
+
+    __booklist = None
+
+    @classmethod
+    def getbooktypes(cls):
+        return cls.BOOK_TYPES
+
+    @staticmethod
+    def getbooklist():
+        if Books.__booklist == None:
+            Books.__booklist = []
+        return Books.__booklist
+
     """Book class docstring """
-    def __init__(self, title, author, pages, price):
+    def __init__(self, title, author, pages, price, booktype):
         self.title = title
         self.author = author
         self.pages = pages
         self.price = price
+        if (not booktype in Books.BOOK_TYPES):
+            raise ValueError("{:s} is not a valid book type".format(booktype))
+        else:
+            self.booktype = booktype
 
     def getprice(self):
         if hasattr(self, "_discount"):
@@ -30,10 +48,12 @@ class Newspaper():
     def __str__(self):
         return "Title: {}, Publisher: {}, Month: {}, Year: {}".format(self.title, self.publisher, self.month, self.year)
 
+print("Book types: ", Books.getbooktypes() )
+
 news1 = Newspaper("The Morning", "The Times", "November", 2021)
 
-book1 = Books("Python Rocks", "Ronald Rivero", 200, 39.99)
-book2 = Books("Python for beginners", "Rodrigo Mato", 100, 49.99)
+book1 = Books("Python Rocks", "Ronald Rivero", 200, 39.99, "Paperback")
+book2 = Books("Python for beginners", "Rodrigo Mato", 100, 49.99, "Ebook")
 
 print(book1)
 print(book1.author)
@@ -68,3 +88,8 @@ print(isinstance(book1, Newspaper))
 print(isinstance(book1, object))
 
 print(Books.__doc__)
+
+thebooks = Books.getbooklist()
+thebooks.append(book1)
+thebooks.append(book2)
+print(thebooks)
