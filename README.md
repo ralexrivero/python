@@ -46,3 +46,23 @@ Python programming language fundamentals.
 Special packages
 
 ## Conditional logic
+
+## Logical operators
+
+* ``>`` greater than
+* ``<`` less than
+* ``>=`` greater than or equal to
+* ``<=`` less than or equal to
+* ``==`` equal to
+* ``!=`` not equal to
+* ``and`` and
+* ``or`` or
+* ``not`` not
+
+## Mathematical precedence
+
+* ``()``
+* ``**``
+* ``* /``
+* ``+ -``
+
