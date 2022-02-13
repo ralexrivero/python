@@ -3,7 +3,7 @@
 type conversion
 """
 from datetime import date
-
+from datetime import datetime
 
 def age(birthday):
     """
@@ -13,9 +13,8 @@ def age(birthday):
     age = today.year - birthday.year
     print(age)
 
-ask = input('What is your birthday? (\"yyyy,m,d/") ')
-print(type(date(ask)))
+birthday = input('What is your birthday? (\"yyyy-m-d") ')
+birthdayTime = datetime.strptime(birthday, '%Y-%m-%d')
+print(type(birthdayTime))
 
-birthday = date(1980,9,24)
-
-age(birthday=birthday)
+age(birthday=birthdayTime)
