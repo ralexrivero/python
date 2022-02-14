@@ -9,12 +9,13 @@ def age(birthday):
     """
     calculates the current age
     """
-    today = date.today()
+    today = datetime.today()
     age = today.year - birthday.year
-    print(age)
+    if (today.month, today.day) < (birthday.month, birthday.day):
+        age -= 1
+    print("{} years old".format(age))
 
 birthday = input('What is your birthday? (\"yyyy-m-d") ')
 birthdayTime = datetime.strptime(birthday, '%Y-%m-%d')
-print(type(birthdayTime))
 
 age(birthday=birthdayTime)
