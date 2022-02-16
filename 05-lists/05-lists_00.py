@@ -5,8 +5,8 @@ import math
 
 randlist = ["string", 1.234, 28]
 oneToTen = list(range(10))
-randList = randList + oneToTen
+randList = randlist + oneToTen
 
 print(randList[0])
 
-print("List Length :", )
+print("List Length :", len(randlist))
