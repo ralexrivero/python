@@ -1,4 +1,4 @@
-#fibonacci series
+"""fibonacci series"""
 print("Fibonacci series")
 max = int(input("Enter a value: "))
 a = 0
