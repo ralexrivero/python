@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
     dictionary keys:
-        must be unmutable
+        must be immutable
         unique, if repeat a key, the previous value is override
 """
 
