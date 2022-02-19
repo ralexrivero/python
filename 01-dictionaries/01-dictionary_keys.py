@@ -11,7 +11,8 @@ d = {
     1: 'es',
     200: 'en',
     1.5: [1, 2, 3],
-    True: False
+    True: False,
+    (1, 2): [4, 5, 6]
 }
 
 print(d)
@@ -21,3 +22,4 @@ print(d)
     then the value 'es' is override by 'False'
 """
 print(d[1])
+print(d[(1,2)])
