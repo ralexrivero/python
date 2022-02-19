@@ -6,6 +6,7 @@ tp = (1, 2, 3, 5, 4, 5, 8, 9, 1)
 print(tp[1])
 print(3 in tp)
 
+""" unpack tuple """
 x, y, z, *other = tp
 
 print("x: {}\ny: {}\nz: {}\nother: {}".format(x, y, z, other))
