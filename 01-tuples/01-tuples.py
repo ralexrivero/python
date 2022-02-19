@@ -15,3 +15,7 @@ print("tp length is: {}".format(len(tp)))
 
 print(tp.count(5))
 print(tp.index(3))
+
+""" create new tuple from slicing """
+tp_new = tp[0:3]
+print("tp_new: {}\ntype of tp_new: {}".format(tp_new, type(tp_new)))
