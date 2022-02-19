@@ -17,7 +17,7 @@ print(d)
 print(d['c'])
 print(d['role'])
 
-l = [
+li = [
     {
         'a': [1, 2, 3],
         'b': 'Hi!',
@@ -32,7 +32,7 @@ l = [
     }
 ]
 
-print(l)
-print(l[0])
-print(l[0]['a'][1])
-print(l[1]['a'][1])
+print(li)
+print(li[0])
+print(li[0]['a'][1])
+print(li[1]['a'][1])
