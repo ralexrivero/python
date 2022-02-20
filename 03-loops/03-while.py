@@ -11,3 +11,9 @@ else:
     never if a break exist
     """
     print('Done with all the work')
+
+""" infinite loop until break """
+while True:
+    response = input('Say something: ')
+    if response.lower() == 'bye':
+        break
