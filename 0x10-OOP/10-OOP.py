@@ -17,3 +17,15 @@ types = [a, b, c, d, e, f, g, h, i, j]
 
 for x in types:
     print('{}'.format(type(x)))
+
+
+class MyObject:
+    """ create the base class """
+    pass
+
+
+""" create an instance of MyObject """
+obj01 = MyObject()
+
+print(type(MyObject))
+print(type(obj01))
