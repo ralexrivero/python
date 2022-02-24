@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 """ object oriented programming """
 
-from socket import J1939_EE_INFO_NONE
-
 
 a = None
 b = True
