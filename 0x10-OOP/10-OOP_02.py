@@ -4,16 +4,17 @@
 
 class Player:
     """ create class Player """
-    def __init__(self, name, age):
-
+    def __init__(self, name='anonymous', age=0):  # default parammeters
+        membership = True  # class object attribute (is static)
         """
         __init__ magic method: init method
             is automatically called when instantiate
         self: refers to the instance
         name: this specific method
         """
-        self.name = name  # attribute
-        self.age = age  # attribute
+        if age >= 18:
+            self.name = name  # attribute (dynamic)
+            self.age = age  # attribute
 
     def run(self):
         print('run!')
@@ -35,3 +36,6 @@ printObj(player02)
 
 player01.run()
 print(player01.run())
+
+""" return the entire blueprint of the object """
+help(player01)
