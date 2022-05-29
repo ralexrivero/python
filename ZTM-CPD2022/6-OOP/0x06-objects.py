@@ -6,7 +6,7 @@ class PlayerCharacter:
     """ class PlayerCharacter """
     def __init__(self, name, age):
         # atuomatically called when instantiate the class
-        self.name = name
+        self.name = name  # attributes
         self.age = age
         # self refers to the object that will be created (playerOne)
 
