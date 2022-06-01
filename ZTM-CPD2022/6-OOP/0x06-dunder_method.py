@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """ dunder method """
 
+
 class Toy():
     def __init__(self, color, age):
         self.color = color
@@ -26,6 +27,7 @@ class Toy():
     def __getitem__(self, i):
         """ acces item using brackets notation [] """
         return self.my_dict[i]
+
 
 action_figure = Toy('red', 0)
 

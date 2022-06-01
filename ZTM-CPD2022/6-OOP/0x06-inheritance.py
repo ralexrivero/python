@@ -27,7 +27,8 @@ class Archer(User):
         self.num_arrows = num_arrows
 
     def attack(self):
-        print("{} is attacking with arrows: arrows left - {}".format(self.name, self.num_arrows))
+        print("{} is attacking with arrows: arrows left - {}".format(
+            self.name, self.num_arrows))
 
 
 wizard1 = Wizard('Merlin', 50, 'merlin@gmail.com')
