@@ -10,8 +10,4 @@
 ## setup
 
 - install chrome
-- Download Chrome Driver
-- Install and setup Selenium [web driver](https://chromedriver.chromium.org/downloads)
-  - unzip driver and move to the project folder
-  - copy the path (get infor) of the driver and to the project
 - Import and install Selenium
